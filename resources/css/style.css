@@ -15,7 +15,7 @@
 header {
     width: 100%;
     position:fixed;
-    z-index: 9999;
+    z-index: 9997;
     background-color: #ffffff;
 }
 
@@ -24,44 +24,6 @@ header main {
     align-items: center;
     justify-content: space-between;
     margin: 3.3125rem 3.625rem 1rem 3.625rem; 
-}
-
-.sidebar{
-    position:fixed;
-    height: 100vh;
-    width: 40vw;
-    transform: translateX(101vw);
-    transition: 0.5s;
-    background: white;
-    z-index: 999;
-    box-shadow: 5rem 5rem 10rem rgba(0, 0, 0, 0.3);
-    border-left: solid rgba(0, 0, 0, 0.07);
-}
-
-.sidebar.show {
-    transform: translateX(60vw);
-}
-
-.direct {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    gap: 2rem;
-    margin-right: 9.69rem;
-    margin-top: 10.37rem;
-    font-family: "Roboto", sans-serif;
-    font-size: 1.6rem;  
-    margin-left: 15rem;
-}
-
-.direct a {
-    text-decoration:none;
-    color:black;
-    font-weight: bold;
-}
-
-.background-menu:hover {
-    background-color: var(--secondary-color);
 }
 
 .logo {
@@ -118,10 +80,51 @@ header main {
     transform:rotate(45deg) translate(-25%, -50%)
 }
 
+
+.sidebar{
+    position:fixed;
+    height: 100vh;
+    width: 70vw;
+    transform: translateX(101vw);
+    transition: 0.5s;
+    background: white;
+    box-shadow: 5rem 5rem 10rem rgba(0, 0, 0, 0.3);
+    border-left: solid rgba(0, 0, 0, 0.07);
+    top:0;
+}
+
+.sidebar.show {
+    transform: translateX(30vw);
+}
+
+.direct {
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+    min-width: 5rem;
+    gap: 2rem;
+    padding-right: 9.69rem;
+    padding-top: 10.37rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;  
+    margin-left: 15rem;
+}
+
+.direct a {
+    text-decoration:none;
+    color:black;
+    font-weight: bold;
+}
+
+.background-menu:hover {
+    background-color: var(--secondary-color);
+}
+
 .main-content {
     display:flex;
     height: 100vh;
     align-items:center;
+    justify-content:center;
 }
 
 .container {
@@ -132,12 +135,13 @@ header main {
     width:100%;
     gap: 4.3125rem;
     flex-wrap:wrap;
+    padding-right: 6.3125rem;
+    padding-left:  7.75rem;
 }
 
 .title p {
     font: 4rem 'Inconsolata', monospace;
     color: var(--text-color);
-    margin-left: 7.75rem;
 }
 
 .title p span{
@@ -150,7 +154,6 @@ header main {
     justify-content:end;
     max-width: 34.52594rem;
     width:100%;
-    margin-right: 6.3125rem;
 }
 
 .card {
@@ -158,7 +161,8 @@ header main {
     height: 34.10144rem;
     border-radius: 1.25rem;
     background: #D9D9D9;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.40);    
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.40);   
+    
 }
 
 .card:nth-child(2){
@@ -172,8 +176,9 @@ header main {
 
 
 .card .card-header {
-    width: 34.52594rem;
+    width: 100%;
     height: 26.41925rem;
+    padding: 2.5rem;
     border-radius: 1.25rem;
     background: linear-gradient(180deg, #08A882 0%, rgba(8, 168, 130, 0.49) 69.46%, rgba(8, 168, 130, 0.00) 100%);
     display:flex;
@@ -250,3 +255,25 @@ header main {
 .card-header-between .arrow { 
     margin-top: 7rem;
 } 
+
+
+@media (max-width: 1460px) {
+    .card{
+        width:100%;
+        aspect-ratio: 1/1;
+    }
+
+    .card-header{
+        width:100%;
+        height:auto;
+
+    }
+
+    .card-header-between{
+        width:100%;
+    }
+
+    .card-header img {
+        width: 100%;
+    }
+}
