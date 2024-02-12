@@ -103,6 +103,8 @@ header {
 
 .sidebar {
   position: fixed;
+  display: flex;
+  flex-direction: column;
   align-items: flex-end;
   height: 100vh;
   width: 70vw;
@@ -124,7 +126,7 @@ header {
   display: flex;
   flex-direction: column;
   min-width: 5rem;
-  align-items: end;
+  align-items: flex-end;
   gap: 2rem;
   padding-top: 10.37rem;
   font-family: "Roboto", sans-serif;
@@ -136,9 +138,9 @@ header {
   text-decoration: none;
   color: black;
   font-weight: bold;
-  align-items: end;
+  align-items: flex-end;
   text-align: right;
-  width: 100%;
+  padding: 4px 8px;
 }
 
 .background-menu:hover {
@@ -236,7 +238,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0 35px 0px rgba(0, 0, 0, 0.08);
   border-radius: 1.5625rem;
   padding: 1.25rem;
   font-family: "Roboto";
@@ -265,10 +267,7 @@ header {
 
 .second-card:hover {
   transform: scale(1.005);
-}
-
-.second-card:hover img {
-  transform: scale(1.01);
+  box-shadow: 0px 0 35px 0px rgba(0, 0, 0, 0.16);
 }
 
 .second-card h2 {
@@ -410,11 +409,20 @@ header {
   border: none;
   padding: 0.2rem;
   outline: 0;
+  padding: 8px;
+  border: 1px solid transparent;
+  color: #363636;
+  transition: 0.5s;
 }
 
-.div-input input:focus,
-.div-input textarea:focus {
-  box-shadow: 0px 0px 4px 1px rgb(151, 151, 151);
+.div-input input:not(:placeholder-shown),
+.div-input textarea:not(:placeholder-shown) {
+  border: 1px solid var(--primary-color);
+}
+
+.div-input input::placeholder,
+.div-input textarea::placeholder {
+  color: #aaa;
 }
 
 .send-form {
