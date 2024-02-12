@@ -1,5 +1,5 @@
 const menuDiv = document.querySelector(".menu");
-const sideBar = document.querySelector(".sidebar");
+const direct = document.querySelector(".direct");
 
 const sr = ScrollReveal({ reset: true });
 
@@ -10,12 +10,16 @@ const defaultConfig = {
   reset: false,
 };
 
-sr.reveal(".second-section-cards", { origin: "top", ...defaultConfig });
-sr.reveal(".third-section-img", { origin: "bottom", ...defaultConfig });
 sr.reveal(".form-img-div", { origin: "bottom", ...defaultConfig });
 sr.reveal(".contact-form", { origin: "top", ...defaultConfig });
 
 menuDiv.addEventListener("click", () => {
   menuDiv.classList.toggle("active");
-  sideBar.classList.toggle("show");
+  direct.classList.toggle("show");
 });
+
+
+const sendEmail = (e) => {
+  e.preventDefault()
+}
+
