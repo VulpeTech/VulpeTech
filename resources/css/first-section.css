@@ -20,8 +20,14 @@
   min-height: 98.7vh;
 }
 
+
 .title p {
   font: 3.4rem "Inconsolata", monospace;
+  color: var(--text-color);
+}
+
+.tiop {
+  font: 1.4rem "Inconsolata", monospace;
   color: var(--text-color);
 }
 
