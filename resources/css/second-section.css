@@ -1,0 +1,140 @@
+.second-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem var(--main-page-padding);
+  gap: 4rem;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.second-section-content {
+  max-width: var(--main-max-w);
+  width: 100%;
+  overflow: hidden;
+
+}
+
+.second-section h1 {
+  font-family: "Roboto";
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.second-section-cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: stretch;
+  justify-content: space-around;
+  gap: 1rem;
+  min-height: 100%;
+  padding: 0.5rem 0.5rem;
+  top: -4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.second-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0 35px 0px rgba(0, 0, 0, 0.07);
+  border-radius: 1.5625rem;
+  padding: 1.25rem;
+  font-family: "Roboto";
+  gap: 0.75rem;
+  /* width: 30%; */
+  min-height: 100%;
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+  transition: 0.5s;
+}
+
+
+.second-card img {
+  width: 100%;
+  max-width: 200px;
+  transition: 0.5s;
+}
+.second-card-text {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.second-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 0 35px 0px rgba(0, 0, 0, 0.2);
+}
+
+.second-card h2 {
+  color: var(--primary-color);
+  font-size: 16px;
+}
+
+.second-card h3 {
+  color: var(--primary-color);
+  font-size: 10px;
+}
+
+.second-card h3 {
+  color: var(--primary-color);
+}
+
+.second-card p {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.wave-img {
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  object-fit: cover;
+  min-width: 1200px;
+  width: 100%;
+  left: 0;
+}
+
+.funtor {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.5625rem;
+  padding: 1.25rem;
+  font-family: "Roboto";
+  gap: 0.75rem;
+  color: #555555;
+  text-align: justify;
+}
+
+.funtor-text {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (max-width: 490px) {
+  .second-section {
+    padding-right: 0;
+  }
+
+  .second-section-cards {
+    overflow: auto;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    width: 100%;
+    gap: 1rem;
+    justify-content: flex-start;
+  }
+}

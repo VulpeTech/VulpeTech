@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-family: "Inria Sans", sans-serif;
+  --primary-color: #08a882;
+  --secondary-color: #f18f22;
+  --text-color: #575757;
+  --header-padding: 13.3125rem;
+  --main-page-padding: 2rem;
+  --main-max-w: 1200px;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 9997;
+  background-color: #ffffff;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem var(--main-page-padding);
+  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--main-max-w);
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  padding: 356px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+::-webkit-scrollbar:hover {
+  opacity: 1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  width: 50%;
+  border-radius: 15px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo img {
+  max-width: 2.75rem;
+}
+
+#marca {
+  font-family: var(--font-family);
+  color: var(--primary-color);
+  font-size: 2.1rem;
+}
+
+#marca span {
+  color: var(--secondary-color);
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: rgb(58, 58, 58);
+  border-radius: 3.125rem;
+  transition: 0.5s;
+}
+
+.menu:hover span {
+  transform: scale(1.1);
+}
+
+.menu.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-33%, 50%);
+}
+
+.menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-33%, -50%);
+}
+
+.direct {
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  width: auto;
+  gap: 25px;
+}
+
+.direct a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  align-items: flex-end;
+  text-align: right;
+  padding: 4px 8px;
+}
+
+.background-menu:hover {
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+}
+
+textarea {
+  resize: none;
+}
+

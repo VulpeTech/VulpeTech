@@ -1,0 +1,188 @@
+
+.fourth-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 4rem var(--main-page-padding);
+}
+
+.fourth-section-main-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10rem;
+  max-width: var(--main-max-w);
+
+  gap: 4rem;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+}
+
+.form-img-div {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 21.875rem;
+}
+.form-img-div img {
+  max-width: 40.625rem;
+  max-height: 36.1875rem;
+  width: 100%;
+}
+
+.contact-side {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex: 1.4;
+  gap: 1.44rem;
+}
+
+.contact-side-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  flex: 1;
+}
+
+.contact-side-title h2 {
+  font-family: "Roboto";
+  font-size: 2rem;
+  color: #575757;
+}
+
+.contact-side-title h2 + h2 {
+  font-family: "Roboto";
+  font-size: 2rem;
+  color: var(--primary-color);
+  text-shadow: var(--secondary-color) 2px 2px;
+}
+
+.contact-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.44rem;
+  width: 100%;
+}
+
+.div-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  gap: 0.3rem;
+}
+
+.div-input label {
+  font-family: "Roboto";
+  font-size: 1rem;
+}
+
+.div-input input,
+.div-input textarea {
+  font-family: "Roboto";
+  font-size: 1rem;
+  background-color: #e7e7e7;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.2rem;
+  outline: 0;
+  padding: 8px;
+  border: 2px solid transparent;
+  color: #363636;
+  transition: 0.5s;
+}
+
+.div-input input:not(:placeholder-shown),
+.div-input textarea:not(:placeholder-shown),
+.div-input input:focus,
+.div-input textarea:focus {
+  border: 2px solid var(--primary-color);
+}
+
+.div-input input:not(:placeholder-shown),
+.div-input textarea:not(:placeholder-shown) {
+  background: #d8faf2;
+}
+
+.div-input input::placeholder,
+.div-input textarea::placeholder {
+  color: #aaa;
+}
+
+.send-form {
+  border-radius: 0.625rem;
+  background-color: #f18f22;
+  padding: 1rem 0;
+  border: none;
+  color: #282d33;
+  transition: 0.3s;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.send-form img {
+  width: 1.4rem;
+  position: absolute;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.send-form:hover {
+  background-color: var(--primary-color);
+}
+
+.sendButton {
+  background-color: transparent;
+  border: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.2rem;
+  width: 100%;
+  transition: 0.3s;
+  background-color: var(--secondary-color);
+  padding: 12px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  height: 50px;
+  color: #000;
+}
+
+.sendButton img {
+  width: 30px;
+}
+
+.sendButton svg path {
+  stroke: #000;
+  color: #000;
+  transition: 0.3s;
+}
+
+.sendButton:hover {
+  opacity: 1;
+  color: #fff !important;
+  background-color: var(--primary-color);
+}
+
+.sendButton:hover svg path {
+  stroke: #fff;
+
+  color: #fff;
+}
